@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [12.x]
+        node-version: [18.x]
 
     steps:
     - uses: actions/checkout@v1
@@ -22,8 +22,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: npm install, build, and test
       run: |
-        npm install
-        npm run test
+        yarn install
+        yarn test
       env:
         CI: true
 
@@ -32,7 +32,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x, 14.x]
+        node-version: [18.x, 20.x]
 
     steps:
     - uses: actions/checkout@v1
@@ -42,7 +42,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: npm install, build, and test
       run: |
-        npm install
-        npm run test
+        yarn install
+        yarn test
       env:
         CI: true

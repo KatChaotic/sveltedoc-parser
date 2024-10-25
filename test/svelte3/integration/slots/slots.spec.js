@@ -62,11 +62,11 @@ describe('SvelteDoc v3 - Slots', () => {
                 text: 'string'
             });
 
-            // TODO: 5.* | Backward compatibility test
-            if (packageConfig.version.startsWith('5.')) {
+            // TODO: 6.* | Backward compatibility test
+            if (packageConfig.version.startsWith('6.')) {
                 expect(slot.parameters, 'parameters field should be removed').undefined;
             } else {
-                expect(slot.parameters, 'Should be backward compatable until 5.* version').to.deep.eq(slot.params);
+                expect(slot.parameters, 'Should be backward compatable until 6.* version').to.deep.eq(slot.params);
             }
 
             done();
