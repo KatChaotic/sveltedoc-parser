@@ -38,7 +38,11 @@ function buildSvelteParser(options, version) {
         return buildSvelte3Parser(options);
     }
 
+    // TODO Remove all svelte2 support
     if (version === SvelteVersionDetector.SVELTE_VERSION_2) {
+        console.log('\x1b[33m%s\x1b[0m', '!!! DEPRECATION WARNING !!!');
+        console.log('\x1b[33m%s\x1b[0m', 'Svelte V2 will be deprecating soon, please use Svelte V3');
+
         return buildSvelte2Parser(options);
     }
 
