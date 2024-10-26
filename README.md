@@ -127,7 +127,7 @@ npm install --save sveltedoc-parser
 - Extract component actions
 - Extract component transitions
 
-### Svelte 3
+### Svelte 3/4
 
 - Extract global component description and keywords from JSDoc comment
   - Top level comment must include `@component`. [Example script](/test/svelte3/integration/globalComment/globalComment.script.svelte), [Example html](/test/svelte3/integration/globalComment/globalComment.markup.svelte)
@@ -149,14 +149,14 @@ Here are the properties supported by `options` (see the [Usage](#Usage) section 
 | **features** | The component features to parse and extract. | string[] | [All supported features](#Supported-feature-names) |
 | **ignoredVisibilities** | The list of ignored visibilities. Symbols with a visibility that is ignored will not be included in the output. | string[] | `['private', 'protected']` |
 | **includeSourceLocations** | Flag, which indicates that source locations should be provided for component symbols. | boolean | `false` |
-| **version** | Optional. Use `2` (will deprecating) or `3` to specify which svelte syntax should be used. When that is not provided, parser try to detect version of the syntax. | number? | `undefined` |
+| **version** | Optional. Use `2` (will deprecating), `3` or `4` to specify which svelte syntax should be used. When that is not provided, parser try to detect version of the syntax. | number? | `undefined` |
 | **defaultVersion** | Optional. Specify default version of svelte syntax, if auto-detector can't identify correct version. | number? | `undefined` |
 
 ### Supported feature names
 
 These are the values that can be included in the `options.features` array:
 
-| Feature       | Svelte 2 | Svelte 3 | Description                                           |
+| Feature       | Svelte 2 | Svelte 3/4 | Description                                           |
 |---------------|:--------:|:--------:|-------------------------------------------------------|
 | `name`        |     ✔    |     ✔    | Component's name                                      |
 | `description` |     ✔    |     ✔    | Component's description                               |

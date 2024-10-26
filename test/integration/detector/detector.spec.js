@@ -43,7 +43,8 @@ describe('SvelteDoc file version detector', () => {
                         filename: path.join(folderPath, file)
                     });
 
-                    expect(version).is.equal(detector.SVELTE_VERSION_3);
+                    // Difference between V3 and V4 is not mach in code, so we can detect it as V4
+                    expect(version).is.equal(detector.SVELTE_VERSION_4);
                 });
             });
     });

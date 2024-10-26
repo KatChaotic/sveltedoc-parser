@@ -34,7 +34,7 @@ function buildSvelte3Parser(options) {
 }
 
 function buildSvelteParser(options, version) {
-    if (version === SvelteVersionDetector.SVELTE_VERSION_3) {
+    if (version === SvelteVersionDetector.SVELTE_VERSION_3 || version === SvelteVersionDetector.SVELTE_VERSION_4) {
         return buildSvelte3Parser(options);
     }
 
