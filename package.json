@@ -38,16 +38,15 @@
     },
     "homepage": "https://github.com/alexprey/sveltedoc-parser",
     "dependencies": {
-        "eslint": "8.57.1",
-        "espree": "9.2.0",
-        "htmlparser2-svelte": "4.1.0"
+        "eslint": "^9.20.1",
+        "espree": "^9.2.0",
+        "htmlparser2-svelte": "^4.1.0"
     },
     "devDependencies": {
         "@eslint/eslintrc": "3.2.0",
         "@eslint/js": "9.20.0",
         "chai": "4.1.2",
         "dirty-chai": "2.0.1",
-        "eslint": "8.57.1",
         "eslint-plugin-chai-expect": "3.1.0",
         "eslint-plugin-import": "2.31.0",
         "eslint-plugin-node": "11.1.0",
